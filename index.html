@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>対戦デビューナビゲーター Ver. 2.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>対戦デビューナビゲーター</h1>
+        <p>最初の1匹、一緒に育てよう。</p>
+    </header>
+
+    <main>
+        <section id="purpose-guides">
+            <h2>育成コースを選んでスタート！</h2>
+            
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="例: アタッカー, トリックルーム, オーロンゲ ...">
+            </div>
+
+            <div class="guides-container">
+                <div class="guide-card" data-guide-id="attacker">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1005.png" alt="ハバタクカミ" class="pokemon-sprite">
+                    <h3>アタッカー育成</h3>
+                    <p>高い攻撃性能で相手を倒す、花形ポケモンを育成するコースです。<br>（例: ハバタクカミ, パオジアン）</p>
+                </div>
+                <div class="guide-card" data-guide-id="durable">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/977.png" alt="ヘイラッシャ" class="pokemon-sprite">
+                    <h3>耐久型育成</h3>
+                    <p>相手の攻撃を受けきり、じっくり戦うポケモンを育成するコースです。<br>（例: ヘイラッシャ, ドヒドイデ）</p>
+                </div>
+                <div class="guide-card" data-guide-id="support">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/892.png" alt="ウーラオス" class="pokemon-sprite">
+                    <h3>サポート型育成</h3>
+                    <p>味方を補助したり、相手を妨害したりする縁の下の力持ちを育成します。<br>（例: オーロンゲ, モロバレル）</p>
+                </div>
+                <div class="guide-card" data-guide-id="weather">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/259.png" alt="ラグラージ" class="pokemon-sprite">
+                    <h3>天候パーティ用育成</h3>
+                    <p>「あめ」や「すなあらし」を活かして戦う、特定の天候のエースを育成します。<br>（例: ペリッパー, バンギラス）</p>
+                </div>
+                <div class="guide-card" data-guide-id="trickroom">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/302.png" alt="ヤミラミ" class="pokemon-sprite">
+                    <h3>トリルパーティ用育成</h3>
+                    <p>素早さが逆転する「トリックルーム」で、鈍足ポケモンを活躍させるコースです。<br>（例: ミミッキュ, ハリテヤマ）</p>
+                </div>
+            </div>
+            <p class="no-results hidden">一致するコースが見つかりませんでした。</p>
+        </section>
+
+        <section id="roadmap" class="hidden">
+            <h2 id="roadmap-title"></h2>
+            
+            <div id="progress-container">
+                <h3>進捗状況</h3>
+                <div class="progress-bar">
+                    <div id="progress-bar-inner"></div>
+                </div>
+                <span id="progress-text">0 / 0</span>
+            </div>
+
+            <ol id="steps-list"></ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 対戦デビューナビゲーター</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
